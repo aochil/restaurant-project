@@ -26,6 +26,21 @@
     height: 100%;
     background-color: cadetblue;
 }
+#footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 150px;
+    background-color: cadetblue;
+}
+.footerTabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+
+}
 .conBody{
     width: auto;
     height: 100%;
@@ -56,15 +71,14 @@
     background-color: white;
 }
 .genInfo{
-    width: 35%;
-    height: 100px;
-    background-color: white;
-    position: absolute;
-    top: 60%;
-    right: 15%;
+    margin: auto;
+    width: 70%;
+    height: 80%;
+    background-color: pink;
     
 }
-#menuBody{
+#menuBody,
+#contactBody{
     width: 100%;
     height: 100%;
     background-color: antiquewhite;
@@ -114,4 +128,14 @@
     margin: 0px 15px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#fHome,
+#fMenu,
+#fContact:hover{
+    cursor: pointer;
+}
+#fHome,
+#fMenu,
+#fContact{
+    width: 83px;
 }
