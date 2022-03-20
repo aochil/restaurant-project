@@ -119,7 +119,7 @@ const landingPage = (()=>{
         const welcome = document.createElement('div');
         welcome.classList.add('welcome');
         
-        welcome.textContent = 'Quench your Thirst with Fresh-oFF-da-Juice'
+        welcome.textContent = 'Quench your thirst with our freshly squeezed juice!'
         conBody.appendChild(welcome);
 
         const welcome2 = document.createElement('div');
