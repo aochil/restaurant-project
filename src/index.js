@@ -28,6 +28,10 @@ const landingPage = (()=>{
         const logo = document.createElement('div');
         logo.classList.add('logo')
         logo.textContent = 'Fresh-oFF-da-Juice';
+        logo.addEventListener('click', ()=>{
+            delCurrentPage();
+            displayContentBody();
+        })
         header.appendChild(logo);
 
         const home = document.createElement('div');
@@ -114,6 +118,11 @@ const landingPage = (()=>{
 
         const landingImg = document.createElement('div');
         landingImg.classList.add('landingImg');
+        landingImg.addEventListener('click', ()=>{
+            delCurrentPage();
+            displayMenuBody();
+
+        })
         conBody.appendChild(landingImg);
 
         const welcome = document.createElement('div');
@@ -168,6 +177,7 @@ const landingPage = (()=>{
             displayMenuBody();
         }))
 
+    }    
         const displayMenuBody = ()=> {
             const pageBody = document.querySelector('#pageBody');
             const menu = document.createElement('div');
@@ -192,7 +202,7 @@ const landingPage = (()=>{
             const clearJuice = document.createElement('div');
             clearJuice.classList.add('drinks');
             clearJuice.id = 'clearJuice'
-            clearJuice.textContent = 'Citrust Berry Blast - $5';
+            clearJuice.textContent = 'Citrust Berry - $5';
             menuItems.appendChild(clearJuice);
 
 
@@ -212,7 +222,7 @@ const landingPage = (()=>{
         }
 
         
-    }
+    
         const contactUsTab = ()=>{
             const contactTab = document.querySelectorAll('#contact, #fContact');
             contactTab.forEach(el => el.addEventListener('click', ()=>{
@@ -231,24 +241,75 @@ const landingPage = (()=>{
                 genInfo.classList.add('genInfo');
                 contactBody.appendChild(genInfo);
 
+                const infoList = document.createElement('div')
+                infoList.id = 'infoList'
+                genInfo.appendChild(infoList)
+
+                const contactLogo = document.createElement('div');
+                contactLogo.id = 'contactLogo'
+                contactLogo.textContent = 'Reach us by:'
+                infoList.appendChild(contactLogo);
+
+                const phone = document.createElement('div');
+                phone.id = 'phone'
+                phone.classList.add('infoList')
+                phone.setAttribute('style', 'white-space: pre;');
+                phone.textContent = 'Call us at: \r\n'
+                phone.textContent += '(917)000-0000'
+                infoList.appendChild(phone);
+
+                const phoneIcon = document.createElement('div');
+                phoneIcon.classList.add('material-icons');
+                phoneIcon.id = 'phoneIcon'
+                phoneIcon.textContent = 'phone'
+                contactLogo.appendChild(phoneIcon)
+
+                const locationIcon = document.createElement('div');
+                locationIcon.classList.add('material-icons');
+                locationIcon.id = 'locationIcon'
+                locationIcon.textContent = 'place'
+                contactLogo.appendChild(locationIcon)
+
+                const emailIcon = document.createElement('div');
+                emailIcon.classList.add('material-icons');
+                emailIcon.id = 'emailIcon'
+                emailIcon.textContent = 'email'
+                contactLogo.appendChild(emailIcon)
+
                 const address = document.createElement('div');
-                address.classList.add('info');
+                address.id = 'address'
+                address.classList.add('infoList')
                 address.setAttribute('style', 'white-space: pre;');
-                address.textContent = 'Come for a visit at: \r\n'
-                address.textContent += '3410 Sweet St \r\n'
+                address.textContent = '3410 Sweet Ave \r\n'
                 address.textContent += 'Brooklyn, NY 11219 \r\n'
-                address.textContent += 'Phone: (917)000-0000 \r\n'
-                address.textContent += 'Email: freshoffdajuice@gmail.com \r\n'
+                address.textContent += 'Open from 10 AM - 7 PM'
+                infoList.appendChild(address);
+
+                const email = document.createElement('div');
+                email.id = 'email'
+                email.classList.add('infoList')
+                email.setAttribute('style', 'white-space: pre;');
+                email.textContent = 'E-Mail us at: \r\n'
+                email.textContent += 'freshoffdajuice@gmail.com'
+                infoList.appendChild(email);
+                // const address = document.createElement('div');
+                // address.classList.add('info');
+                // address.setAttribute('style', 'white-space: pre;');
+                // address.textContent = 'Come for a visit at: \r\n'
+                // address.textContent += '3410 Sweet St \r\n'
+                // address.textContent += 'Brooklyn, NY 11219 \r\n'
+                // address.textContent += 'Phone: (917)000-0000 \r\n'
+                // address.textContent += 'Email: freshoffdajuice@gmail.com \r\n'
                 
-                genInfo.appendChild(address);
+                // genInfo.appendChild(address);
                 
-                const hours = document.createElement('div');
-                hours.classList.add('info');
-                hours.setAttribute('style', 'white-space: pre;');
-                hours.textContent = 'Hours of Operation';
-                hours.textContent = 'Mon - Fri : 10 AM - 8 PM \r\n'
-                hours.textContent += 'Sat - Sun : 11 AM - 6 PM'
-                genInfo.appendChild(hours);
+                // const hours = document.createElement('div');
+                // hours.classList.add('info');
+                // hours.setAttribute('style', 'white-space: pre;');
+                // hours.textContent = 'Hours of Operation';
+                // hours.textContent = 'Mon - Fri : 10 AM - 8 PM \r\n'
+                // hours.textContent += 'Sat - Sun : 11 AM - 6 PM'
+                // genInfo.appendChild(hours);
             }
         }
 
