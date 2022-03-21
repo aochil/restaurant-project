@@ -1,11 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Pacifico&family=Shrikhand&display=swap');
 .header{
+    font-family: 'Fredoka One', cursive;
+    color: #edca24;
+    -webkit-text-stroke: 1px #458fb4;
+    font-size: x-large;
     display: flex;
-    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
     width: auto;
-    background: steelblue;
+    background: #7bb4d2;
 
 }
-
+.logo{
+    font-family: 'Shrikhand', cursive;
+    -webkit-text-stroke: 2px #458fb4;
+    font-size: 50px;
+}
+#Home{
+    margin-left: 12%
+}
+.headerTab{
+    transition: .5s;
+}
 /* .headerTabs{
     align-self: center;
     padding: 7px;
@@ -17,6 +37,7 @@
     margin-left: 5%;
 } */
 .headerTab:hover{
+    -webkit-text-stroke: 2px #458fb4;
     cursor: pointer;
     margin: 5px;
     font-size: larger;
@@ -32,7 +53,7 @@
     justify-content: space-between;
     width: 100%;
     height: 80px;
-    background-color: cadetblue;
+    background-color: #458fb4;
 }
 .footerTabs{
     display: flex;
@@ -41,7 +62,10 @@
     width: 30%;
 
 }
-.conBody{
+#conBody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: auto;
     height: 100%;
     position: relative;
@@ -50,25 +74,54 @@
 #pageBody{
     width: auto;
     height: 573px;
-    background-color: antiquewhite;
+    background-color: #e2edf3;
 }
 .landingImg{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     /* margin-top: 50px; */
     margin-left: 120px;
     background: url('./images/homejuice.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 16px 9px lightpink;
 }
-.welcome{
+#welcome{
+    text-align: center;
+    color: lightpink;
+    font-family: 'Shrikhand', cursive;
+    -webkit-text-stroke: 2.5px #458fb4;
+    font-size: xxx-large;
     position: absolute;
-    top: 25%;
-    right: 15%;
-    width: 35%;
-    background-color: white;
+    top: 13%;
+    right: 6%;
+    width: 44%;
+}
+#welcome2{
+    font-size: x-large;
+    color: #458fb4;
+    -webkit-text-stroke: 0px #458fb4;
+}
+#bullets{
+    font-size: large;
+    margin-top: 10px;
+    line-height: 50px;
+}
+.material-icons{
+    position: relative;
+}
+#check{
+    top: -140px;
+    right: 11%;
+}
+#check1{
+    top: -89px;
+    right: 16%;
+}
+#check2{
+    top: -38px;
+    right: 21%;
 }
 .genInfo{
     margin: auto;
@@ -128,6 +181,9 @@
     margin: 0px 15px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#footer{
+    color: #cfe9f7; 
 }
 #fHome,
 #fMenu,

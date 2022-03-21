@@ -117,15 +117,41 @@ const landingPage = (()=>{
         conBody.appendChild(landingImg);
 
         const welcome = document.createElement('div');
-        welcome.classList.add('welcome');
+        welcome.id = 'welcome'
         
-        welcome.textContent = 'Quench your thirst with our freshly squeezed juice!'
+        welcome.textContent = 'Quench your thirst with our freshly squeezed juice'
         conBody.appendChild(welcome);
 
         const welcome2 = document.createElement('div');
-        welcome2.classList.add('welcome2');
-        welcome2.textContent = 'Please your taste receptors'
+        welcome2.id = 'welcome2'
+        welcome2.textContent = 'Please your taste buds!'
         welcome.appendChild(welcome2);
+
+        const bullets = document.createElement('div');
+        bullets.id = 'bullets'
+        bullets.setAttribute('style', 'white-space: pre;');
+        bullets.textContent =  'Delicious \r\n'    
+        bullets.textContent +=  'Nutritious \r\n'
+        bullets.textContent += 'Ambitious'
+        welcome2.appendChild(bullets)
+
+        const checkMark = document.createElement('div');
+        checkMark.classList.add('material-icons')
+        checkMark.id = 'check'
+        checkMark.textContent = 'done'
+        welcome2.appendChild(checkMark);
+
+        const checkMark1 = document.createElement('div');
+        checkMark1.id = 'check1'
+        checkMark1.classList.add('material-icons')
+        checkMark1.textContent = 'done'
+        welcome2.appendChild(checkMark1);
+
+        const checkMark2 = document.createElement('div');
+        checkMark2.id = 'check2'
+        checkMark2.classList.add('material-icons')
+        checkMark2.textContent = 'done'
+        welcome2.appendChild(checkMark2);
 
     }
     
