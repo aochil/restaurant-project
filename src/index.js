@@ -202,7 +202,7 @@ const landingPage = (()=>{
             const clearJuice = document.createElement('div');
             clearJuice.classList.add('drinks');
             clearJuice.id = 'clearJuice'
-            clearJuice.textContent = 'Citrust Berry - $5';
+            clearJuice.textContent = 'Citrus Berry - $5';
             menuItems.appendChild(clearJuice);
 
 
